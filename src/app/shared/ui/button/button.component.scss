@@ -1,0 +1,19 @@
+.btn {
+  width: 29rem;
+  height: 5.3rem;
+  border-radius: 4px;
+  background-color: #db2d37;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .arrow {
+    font-size: 3rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

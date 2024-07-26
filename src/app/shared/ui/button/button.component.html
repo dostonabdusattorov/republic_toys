@@ -1,0 +1,8 @@
+<button class="btn">
+  <span>
+    <ng-content></ng-content>
+  </span>
+  <span *ngIf="arrow !== 'none'" class="arrow">
+    {{ arrow === "right" ? "→" : "&#x2193;" }}
+  </span>
+</button>
