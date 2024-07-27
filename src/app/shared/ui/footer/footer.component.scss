@@ -1,0 +1,103 @@
+.footer {
+  background-color: #f6f6f6;
+  &-body {
+    border-bottom: 1px solid #e1e1e1;
+    &-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      &-logo {
+        padding: 4rem 0 8rem 0;
+
+        a {
+          display: inline-block;
+          margin-bottom: 2rem;
+          cursor: pointer;
+          img {
+            height: 8rem;
+          }
+        }
+        p {
+          font-size: 1.8rem;
+          color: #10142d;
+        }
+      }
+      &-navbar {
+        padding-top: 4rem;
+        border-right: 1px solid #e1e1e1;
+        &-navlist {
+          list-style-type: none;
+          li {
+            margin-bottom: 1.6rem;
+            a {
+              display: flex;
+              justify-content: start;
+              align-items: center;
+              gap: 5px;
+              font-size: 1.8rem;
+              color: #10142d;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      &-socials {
+        padding: 4rem 0 0 4rem;
+        border-right: 1px solid #e1e1e1;
+        &-navlist {
+          list-style-type: none;
+          li {
+            margin-bottom: 1.6rem;
+            a {
+              display: flex;
+              justify-content: start;
+              align-items: center;
+              gap: 5px;
+              font-size: 1.8rem;
+              color: #10142d;
+              cursor: pointer;
+              img {
+                transform: rotate(-45deg);
+              }
+            }
+          }
+        }
+      }
+      &-info {
+        padding: 4rem 0 0 4rem;
+        p {
+          display: flex;
+          justify-content: start;
+          gap: 5px;
+          font-size: 1.8rem;
+          color: #10142d;
+          margin-bottom: 1.7rem;
+          span {
+            transform: translateY(25%);
+          }
+        }
+      }
+    }
+  }
+  &-side {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      font-size: 1.8rem;
+      color: #10142d;
+      &-rights {
+        padding: 4rem 0;
+      }
+      &-terms {
+        padding: 4rem 0;
+        border-right: 1px solid #e1e1e1;
+      }
+      &-policy {
+        border-right: 1px solid #e1e1e1;
+        padding: 4rem 0 0 4rem;
+      }
+      &-agency {
+        padding: 4rem 0 0 4rem;
+      }
+    }
+  }
+}

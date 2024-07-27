@@ -10,10 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .arrow {
-    font-size: 3rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  gap: 1rem;
+  .down {
+    transform: rotate(90deg);
   }
 }

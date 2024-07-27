@@ -1,8 +1,9 @@
 <button class="btn">
-  <span>
-    <ng-content></ng-content>
-  </span>
-  <span *ngIf="arrow !== 'none'" class="arrow">
-    {{ arrow === "right" ? "→" : "&#x2193;" }}
-  </span>
+  <ng-content></ng-content>
+  <img
+    *ngIf="arrow !== 'none'"
+    [class]="arrow"
+    src="../../../../assets/icons/Arrow---Right.svg"
+    alt="arrow-right"
+  />
 </button>
