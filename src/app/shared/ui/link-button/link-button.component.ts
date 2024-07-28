@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,8 +6,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './link-button.component.html',
-  styleUrls: ['./link-button.component.scss']
+  styleUrls: ['./link-button.component.scss'],
 })
 export class LinkButtonComponent {
-
+  @Input() icon: string = '';
+  @Input() link: string = '';
 }

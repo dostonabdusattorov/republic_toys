@@ -1,0 +1,27 @@
+.link-btn {
+  width: 33rem;
+  height: 5.5rem;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-right: 1px solid #e1e1e1;
+  }
+  .link {
+    width: calc(100% - 5.5rem);
+    height: 5.5rem;
+    a {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      color: #10142d;
+      font-size: 1.8rem;
+    }
+  }
+}

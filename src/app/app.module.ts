@@ -3,7 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonComponent, HeaderComponent, FooterComponent } from './shared';
+import {
+  ButtonComponent,
+  HeaderComponent,
+  FooterComponent,
+  LinkButtonComponent,
+} from './shared';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,8 +18,14 @@ import { ButtonComponent, HeaderComponent, FooterComponent } from './shared';
     ButtonComponent,
     HeaderComponent,
     FooterComponent,
+    LinkButtonComponent,
   ],
-  exports: [ButtonComponent, HeaderComponent, FooterComponent],
+  exports: [
+    ButtonComponent,
+    HeaderComponent,
+    FooterComponent,
+    LinkButtonComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
