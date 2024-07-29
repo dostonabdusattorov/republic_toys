@@ -1,0 +1,35 @@
+.breadcrumb {
+  &-navlist {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.6rem;
+      .home {
+        margin-right: 4px;
+      }
+      a,
+      span {
+        padding-top: 4px;
+      }
+      a {
+        color: #b8b8b8;
+        margin-right: 3px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .right {
+        transform: rotate(-90deg);
+        padding: 0 5px 3px 0;
+      }
+      span {
+        color: #10142d;
+      }
+    }
+  }
+}

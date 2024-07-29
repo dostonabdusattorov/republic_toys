@@ -1,0 +1,26 @@
+<nav class="breadcrumb">
+  <ul class="breadcrumb-navlist">
+    <li
+      *ngFor="let breadcrumb of breadcrumbs; let last = last; let first = first"
+    >
+      <img
+        *ngIf="first"
+        src="../../../../assets/icons/Home 1.svg"
+        alt="Home icon"
+        class="home"
+      />
+      <a *ngIf="!last; else current" [routerLink]="breadcrumb.url">
+        {{ breadcrumb.label }}
+      </a>
+      <img
+        *ngIf="!last"
+        src="../../../../assets/icons/down.svg"
+        alt="right"
+        class="right"
+      />
+      <ng-template #current>
+        <span>{{ breadcrumb.label }}</span>
+      </ng-template>
+    </li>
+  </ul>
+</nav>
