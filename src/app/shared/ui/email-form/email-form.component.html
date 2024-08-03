@@ -1,0 +1,52 @@
+<h2 class="heading-secondary">
+  Let’s cooperate together
+  <img src="../../../../assets/icons/Arrow---Right-grey.svg" alt="" />
+</h2>
+<div class="form-container">
+  <form class="form" [formGroup]="sendEmailForm" (ngSubmit)="submit()">
+    <div class="control-group">
+      <div class="control">
+        <div class="icon">
+          <img src="../../../../assets/icons/Profile.svg" alt="profile icon" />
+        </div>
+        <input type="text" placeholder="Your name" formControlName="name" />
+      </div>
+      <div class="control">
+        <div class="icon">
+          <img src="../../../../assets/icons/mention 1.svg" alt="@ icon" />
+        </div>
+        <input
+          type="text"
+          placeholder="Email address"
+          formControlName="email"
+        />
+      </div>
+    </div>
+    <div class="text-area">
+      <textarea
+        placeholder="Please type your message"
+        formControlName="message"
+      ></textarea>
+    </div>
+    <div class="btn">
+      <app-button arrow="right">SEND MESSAGE</app-button>
+    </div>
+  </form>
+  <div class="info">
+    <p>
+      <img src="../../../../assets/icons/phone-number.svg" alt="phone" />
+      <span>(71) 200-70-60</span>
+    </p>
+    <p>
+      <img src="../../../../assets/icons/calendar.svg" alt="calendar" />
+      <span>Working days Monday — Friday / from 09:00 am to 20:00 pm.</span>
+    </p>
+    <p>
+      <img src="../../../../assets/icons/location.svg" alt="location" />
+      <span
+        >Uzbekistan / Tashkent City / Olmazor district / Karasaray street
+        3.</span
+      >
+    </p>
+  </div>
+</div>

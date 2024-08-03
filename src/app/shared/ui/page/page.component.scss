@@ -1,0 +1,83 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  &-aside {
+    border-right: 1px solid #e1e1e1;
+    &-logo {
+      a {
+        border-bottom: 1px solid #e1e1e1;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 11rem;
+        padding-top: 1.2rem;
+        cursor: pointer;
+        padding-left: 5rem;
+        img {
+          height: 8rem;
+        }
+      }
+    }
+    &-breadcrumb {
+      padding: 2rem 0 2rem 5rem;
+      border-bottom: 1px solid #e1e1e1;
+    }
+    &-menu {
+      padding: 4rem 0 0 5rem;
+    }
+  }
+  &-main {
+    &-header {
+      display: grid;
+      grid-template-columns: 4fr 1fr 1fr;
+      height: 11rem;
+      border-bottom: 1px solid #e1e1e1;
+      &-navbar {
+        ul {
+          list-style-type: none;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          height: 100%;
+          li a {
+            border-right: 1px solid #e1e1e1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            font-size: 1.8rem;
+            color: #10142d;
+            cursor: pointer;
+            &.active-link {
+              border-bottom: 2px solid #db2d37;
+            }
+          }
+        }
+      }
+      &-lang {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-right: 1px solid #e1e1e1;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+      &-phone {
+        display: flex;
+        align-items: center;
+        padding-left: 1.2rem;
+        div {
+          width: 17.2rem;
+          height: 4.5rem;
+          border-radius: 4px;
+          background-color: #db2d37;
+          font-size: 1.8rem;
+          color: #fff;
+          display: grid;
+          place-items: center;
+        }
+      }
+    }
+  }
+}

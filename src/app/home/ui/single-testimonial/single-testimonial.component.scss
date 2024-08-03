@@ -1,0 +1,46 @@
+.testimonial {
+  width: 33rem;
+  height: 32rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  position: relative;
+  .quotation {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: -1;
+  }
+  .text {
+    height: 24rem;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 1.6rem;
+    color: #10142d;
+    line-height: 2.4rem;
+    padding: 2rem;
+  }
+  .body {
+    padding: 2rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .desc {
+      .job {
+        font-size: 1.6rem;
+        color: #b8b8b8;
+        margin-bottom: 5px;
+      }
+      .name {
+        font-size: 1.8rem;
+        color: #10142d;
+      }
+    }
+    .img {
+      display: grid;
+      place-items: center;
+      img {
+        height: 4.8rem;
+      }
+    }
+  }
+}

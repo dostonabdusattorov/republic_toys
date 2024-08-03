@@ -10,16 +10,19 @@ export const products = {
       id: carsId,
       name: 'Cars',
       img: 'src/assets/images/cars.png',
+      count: 16,
     },
     {
       id: constructorsId,
       name: 'Constructors',
       img: 'src/assets/images/contructors.png',
+      count: 16,
     },
     {
       id: toysForGirlsId,
       name: 'Toys for girls',
       img: 'src/assets/images/toys-for-girls.png',
+      count: 16,
     },
   ],
   toys: [

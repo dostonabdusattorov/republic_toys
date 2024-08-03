@@ -3,12 +3,14 @@
     <img [src]="icon" alt="Link icon" />
   </div>
   <div class="link">
-    <a [href]="link">
-      <ng-content></ng-content>
-      <img
-        src="../../../../assets/icons/Arrow---Right-grey.svg"
-        alt="Arrow right"
-      />
+    <a [routerLink]="link">
+      <span
+        ><ng-content></ng-content>
+        <img
+          src="../../../../assets/icons/Arrow---Right-grey.svg"
+          alt="Arrow right"
+          [ngClass]="{ down: down }"
+      /></span>
     </a>
   </div>
 </div>

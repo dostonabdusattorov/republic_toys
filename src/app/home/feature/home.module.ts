@@ -5,11 +5,20 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import {
   ButtonComponent,
-  HeaderComponent,
   FooterComponent,
   LinkButtonComponent,
   BreadcrumbComponent,
+  OrderLinkComponent,
+  PageComponent,
+  EmailFormComponent,
+  ClientsSliderComponent,
 } from '../../shared';
+import {
+  AccordionComponent,
+  CarouselComponent,
+  CategoryBoxComponent,
+  TestimonialListComponent,
+} from '../ui';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -17,10 +26,17 @@ import {
     CommonModule,
     HomeRoutingModule,
     ButtonComponent,
-    HeaderComponent,
     FooterComponent,
     LinkButtonComponent,
     BreadcrumbComponent,
+    OrderLinkComponent,
+    PageComponent,
+    CarouselComponent,
+    CategoryBoxComponent,
+    TestimonialListComponent,
+    AccordionComponent,
+    EmailFormComponent,
+    ClientsSliderComponent,
   ],
 })
 export class HomeModule {}

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from 'src/app/shared';
 
 @Component({
   selector: 'app-home',

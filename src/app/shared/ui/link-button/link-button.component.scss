@@ -10,6 +10,8 @@
     width: 5.5rem;
     height: 5.5rem;
     border-right: 1px solid #e1e1e1;
+    display: grid;
+    place-content: center;
   }
   .link {
     width: calc(100% - 5.5rem);
@@ -22,6 +24,15 @@
       gap: 5px;
       color: #10142d;
       font-size: 1.8rem;
+      span {
+        border-bottom: 1px solid #10142d;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .down {
+          transform: rotate(90deg);
+        }
+      }
     }
   }
 }

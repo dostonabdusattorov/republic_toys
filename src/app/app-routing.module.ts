@@ -14,7 +14,7 @@ const routes: Routes = [
         (m) => m.ProductShellModule
       ),
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  // { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({

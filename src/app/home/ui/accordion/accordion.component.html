@@ -1,0 +1,24 @@
+<div
+  class="accordion-item"
+  *ngFor="let item of faqs; let i = index; trackBy: trackById"
+>
+  <div class="accordion-item-header" (click)="toggleAccordion(i)">
+    <p>{{ item.title }}</p>
+    <div class="icon">
+      <img
+        [src]="
+          item.expanded
+            ? '../../../../assets/icons/Minus 4 1.svg'
+            : '../../../../assets/icons/Plus 4 5.svg'
+        "
+        alt="accordion icon"
+      />
+    </div>
+  </div>
+  <div
+    class="accordion-item-content"
+    [@accordionAnimation]="item.expanded ? 'expanded' : 'collapsed'"
+  >
+    <p>{{ item.content }}</p>
+  </div>
+</div>

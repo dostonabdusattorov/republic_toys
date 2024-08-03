@@ -1,0 +1,33 @@
+.category-box {
+  width: 33rem;
+  height: 30.8rem;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  &:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s;
+  }
+  &-img {
+    height: 22rem;
+    border-bottom: 1px solid #e1e1e1;
+    img {
+      height: 100%;
+    }
+  }
+  &-body {
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 2rem 0 2rem 2rem;
+      .count {
+        font-size: 1.6rem;
+        color: #b8b8b8;
+        margin-bottom: 4px;
+      }
+      .name {
+        font-size: 1.8rem;
+        color: #10142d;
+      }
+    }
+  }
+}

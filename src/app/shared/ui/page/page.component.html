@@ -1,0 +1,52 @@
+<div class="page">
+  <aside class="page-aside">
+    <div class="page-aside-logo">
+      <a routerLink="">
+        <img src="../../../../assets/images/LOGO.svg" alt="Logo" />
+      </a>
+    </div>
+    <div class="page-aside-breadcrumb">
+      <ng-content select="#breadcrumb"></ng-content>
+    </div>
+    <div class="page-aside-menu">
+      <ng-content select="#menu"></ng-content>
+    </div>
+  </aside>
+  <main class="page-main">
+    <header class="page-main-header">
+      <nav class="page-main-header-navbar">
+        <ul>
+          <li>
+            <a routerLink="/products" routerLinkActive="active-link">
+              <img src="../../../../assets/icons/Car-bold.svg" alt="car-bold" />
+              Toys
+            </a>
+          </li>
+          <li>
+            <a routerLink="/showroom" routerLinkActive="active-link"
+              >360° Showroom</a
+            >
+          </li>
+          <li>
+            <a routerLink="/about" routerLinkActive="active-link">About Us</a>
+          </li>
+          <li>
+            <a routerLink="/contacts" routerLinkActive="active-link"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="page-main-header-lang">
+        <img src="../../../../assets/icons/World-bold.svg" alt="world" />
+        ENG
+        <img src="../../../../assets/icons/down.svg" alt="down" />
+      </div>
+      <div class="page-main-header-phone">
+        <div>(71) 200-70-60</div>
+      </div>
+    </header>
+    <ng-content select="#body"></ng-content>
+  </main>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,38 @@
+<div class="client-slider">
+  <div class="client-slider-list" @fadeInOut>
+    <img
+      *ngFor="let slide of activeSlides; let i = index; trackBy: trackById"
+      [src]="slide"
+      alt="client"
+      [ngClass]="{ current: currentSlide === i }"
+    />
+  </div>
+  <button
+    class="control prev"
+    [ngClass]="{ active: currentSlide > 1 }"
+    (click)="prev()"
+  >
+    <img
+      [src]="
+        currentSlide > 1
+          ? '../../../../assets/icons/Arrow---Right.svg'
+          : '../../../../assets/icons/Arrow---Right-grey.svg'
+      "
+      alt="prev"
+    />
+  </button>
+  <button
+    class="control next"
+    [ngClass]="{ active: currentSlide < slides.length - 2 }"
+    (click)="next()"
+  >
+    <img
+      [src]="
+        currentSlide < slides.length - 2
+          ? '../../../../assets/icons/Arrow---Right.svg'
+          : '../../../../assets/icons/Arrow---Right-grey.svg'
+      "
+      alt="next"
+    />
+  </button>
+</div>
