@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-email-form',
@@ -12,13 +17,15 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class EmailFormComponent {
   sendEmailForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    message: new FormControl(''),
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', [Validators.required]),
   });
 
   submit() {
-    console.log(this.sendEmailForm.value);
-    this.sendEmailForm.setValue({ name: '', email: '', message: '' });
+    if (this.sendEmailForm.valid) {
+      console.log(this.sendEmailForm.value);
+      this.sendEmailForm.setValue({ name: '', email: '', message: '' });
+    }
   }
 }

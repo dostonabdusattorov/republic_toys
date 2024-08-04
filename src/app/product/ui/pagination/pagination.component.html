@@ -1,0 +1,16 @@
+<div class="pagination">
+  <div class="pagination-item prev" (click)="prevHandler()">
+    <img src="../../../../assets/icons/Arrow---Right-grey.svg" alt="prev" />
+  </div>
+  <div
+    *ngFor="let item of pagination_list"
+    class="pagination-item"
+    [ngClass]="{ active: item === current }"
+    (click)="itemHandler(item)"
+  >
+    {{ item && item }}
+  </div>
+  <div class="pagination-item next" (click)="nextHandler()">
+    <img src="../../../../assets/icons/Arrow---Right-grey.svg" alt="next" />
+  </div>
+</div>

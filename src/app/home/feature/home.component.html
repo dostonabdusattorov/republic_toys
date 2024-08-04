@@ -5,10 +5,8 @@
     ></app-breadcrumb>
   </div>
   <div id="menu">
-    <div class="aside-body">
-      <app-order-link></app-order-link>
-      <app-button arrow="right">ORDER NOW</app-button>
-    </div>
+    <app-order-link></app-order-link>
+    <app-button arrow="right">ORDER NOW</app-button>
   </div>
   <div id="body">
     <h1 class="heading">Home</h1>
@@ -29,39 +27,10 @@
       <h2 class="heading-secondary">Toys categories</h2>
       <div class="category-list">
         <app-category-box
-          img="assets/images/contructors.png"
-          [count]="16"
-          name="Contructors"
-        ></app-category-box>
-        <app-category-box
-          img="../../../../assets/images/contructors.png"
-          [count]="16"
-          name="Contructors"
-        ></app-category-box>
-        <app-category-box
-          img="../../../../assets/images/contructors.png"
-          [count]="16"
-          name="Contructors"
-        ></app-category-box>
-        <app-category-box
-          img="../../../../assets/images/contructors.png"
-          [count]="16"
-          name="Contructors"
-        ></app-category-box>
-        <app-category-box
-          img="../../../../assets/images/contructors.png"
-          [count]="16"
-          name="Contructors"
-        ></app-category-box>
-        <app-category-box
-          img="../../../../assets/images/contructors.png"
-          [count]="16"
-          name="Contructors"
-        ></app-category-box>
-        <app-category-box
-          img="../../../../assets/images/contructors.png"
-          [count]="16"
-          name="Contructors"
+          *ngFor="let category of categories"
+          [img]="category.img"
+          [count]="category.count"
+          [name]="category.name"
         ></app-category-box>
       </div>
     </section>

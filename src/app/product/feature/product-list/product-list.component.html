@@ -7,4 +7,78 @@
       ]"
     ></app-breadcrumb>
   </div>
+  <div id="menu">
+    <div class="categories-filter">
+      <h3>Categories</h3>
+      <div
+        *ngFor="let category of categoriesFilter"
+        class="filter-control"
+        [ngClass]="{ checked: category.selected }"
+        (click)="categoryFilterHandler(category.id)"
+      >
+        <div class="check">
+          <img
+            *ngIf="category.selected"
+            src="../../../../assets/icons/Stroke-3.svg"
+            alt="check icon"
+          />
+        </div>
+        <div class="title">{{ category.name }} ({{ category.count }})</div>
+      </div>
+    </div>
+    <app-order-link></app-order-link>
+    <app-button arrow="right">ORDER NOW</app-button>
+  </div>
+  <div id="body">
+    <h1 class="heading">Toys</h1>
+    <div class="search-box">
+      <div class="search-input">
+        <input type="text" placeholder="Search among 100+ toys" />
+        <div class="icon">
+          <img src="../../../../assets/icons/Search.svg" alt="search icon" />
+        </div>
+      </div>
+      <div class="filter-select">
+        <div class="icon">
+          <img
+            src="../../../../assets/icons/preferences 1.svg"
+            alt="filter icon"
+          />
+        </div>
+        <div class="select">
+          <span>Popular</span>
+          <img src="../../../../assets/icons/down.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="selected-categories">
+      <div
+        *ngFor="let category of selectedCategoriesFilter"
+        class="category"
+        (click)="categoryFilterHandler(category.id)"
+      >
+        {{ category.name }}
+        <img
+          src="../../../../assets/icons/Close remove 1.svg"
+          alt="remove icon"
+        />
+      </div>
+    </div>
+    <div class="toys-list">
+      <app-toy-box
+        *ngFor="let toy of filteredToys"
+        [img]="toy.images[0]"
+        [articul]="toy.articul"
+        [name]="toy.name"
+      ></app-toy-box>
+    </div>
+    <div class="pagination">
+      <app-pagination
+        [total_toys_count]="total_toys_count"
+        [current]="current"
+        [pagination_count]="pagination_count"
+        (change)="fetchToys($event)"
+      ></app-pagination>
+    </div>
+  </div>
 </app-page>

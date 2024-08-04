@@ -1,5 +1,5 @@
 <div class="client-slider">
-  <div class="client-slider-list" @fadeInOut>
+  <div class="client-slider-list">
     <img
       *ngFor="let slide of activeSlides; let i = index; trackBy: trackById"
       [src]="slide"

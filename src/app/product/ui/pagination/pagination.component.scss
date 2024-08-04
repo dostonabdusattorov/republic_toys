@@ -1,0 +1,26 @@
+.pagination {
+  width: 33rem;
+  height: 5.5rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  &-item {
+    display: grid;
+    place-items: center;
+    border-right: 1px solid #e1e1e1;
+    font-size: 1.8rem;
+    color: #10142d;
+    cursor: pointer;
+    &:last-child {
+      border: none;
+    }
+    &.prev img {
+      transform: rotate(180deg);
+    }
+    &.active {
+      background-color: #db2d37;
+      color: #fff;
+    }
+  }
+}
