@@ -1,25 +1,92 @@
 <div class="carousel">
-  <div class="img-container">
-    <img src="../../../../assets/images/Rectangle 62.png" alt="" />
+  <div class="carousel-wrapper">
+    <div class="carousel-wrapper-list" [style.transform]="transformStyle">
+      <div class="carousel-wrapper-list-item">
+        <div class="img-container">
+          <img src="../../../../assets/images/Rectangle 62.png" alt="" />
+        </div>
+        <h2 class="heading-secondary">
+          Safe and beautiful toys <br />
+          for your children
+        </h2>
+        <p class="description">
+          With over 300+ expertly designed projects to inspire the next
+          generation of innovators and problem-solvers
+        </p>
+      </div>
+      <div class="carousel-wrapper-list-item">
+        <div class="img-container">
+          <img src="../../../../assets/images/Rectangle 62.png" alt="" />
+        </div>
+        <h2 class="heading-secondary">
+          Safe and beautiful toys <br />
+          for your children
+        </h2>
+        <p class="description">
+          With over 300+ expertly designed projects to inspire the next
+          generation of innovators and problem-solvers
+        </p>
+      </div>
+      <div class="carousel-wrapper-list-item">
+        <div class="img-container">
+          <img src="../../../../assets/images/Rectangle 62.png" alt="" />
+        </div>
+        <h2 class="heading-secondary">
+          Safe and beautiful toys <br />
+          for your children
+        </h2>
+        <p class="description">
+          With over 300+ expertly designed projects to inspire the next
+          generation of innovators and problem-solvers
+        </p>
+      </div>
+      <div class="carousel-wrapper-list-item">
+        <div class="img-container">
+          <img src="../../../../assets/images/Rectangle 62.png" alt="" />
+        </div>
+        <h2 class="heading-secondary">
+          Safe and beautiful toys <br />
+          for your children
+        </h2>
+        <p class="description">
+          With over 300+ expertly designed projects to inspire the next
+          generation of innovators and problem-solvers
+        </p>
+      </div>
+    </div>
   </div>
-  <h2 class="heading-secondary">
-    Safe and beautiful toys <br />
-    for your children
-  </h2>
-  <p class="description">
-    With over 300+ expertly designed projects to inspire the next generation of
-    innovators and problem-solvers
-  </p>
-  <button class="control prev">
-    <img src="../../../../assets/icons/Arrow---Right-grey.svg" alt="prev" />
+  <button
+    class="control prev"
+    [ngClass]="{ active: currentSlide > 0 }"
+    (click)="prev()"
+  >
+    <img
+      [src]="
+        currentSlide > 0
+          ? '../../../../assets/icons/Arrow---Right.svg'
+          : '../../../../assets/icons/Arrow---Right-grey.svg'
+      "
+      alt="prev"
+    />
   </button>
-  <button class="control next active">
-    <img src="../../../../assets/icons/Arrow---Right.svg" alt="next" />
+  <button
+    class="control next"
+    [ngClass]="{ active: currentSlide < 3 }"
+    (click)="next()"
+  >
+    <img
+      [src]="
+        currentSlide < 3
+          ? '../../../../assets/icons/Arrow---Right.svg'
+          : '../../../../assets/icons/Arrow---Right-grey.svg'
+      "
+      alt="next"
+    />
   </button>
   <div class="order">
-    <button class="current"></button>
-    <button></button>
-    <button></button>
-    <button></button>
+    <button [ngClass]="{ current: currentSlide === 0 }"></button>
+    <button [ngClass]="{ current: currentSlide === 1 }"></button>
+    <button [ngClass]="{ current: currentSlide === 2 }"></button>
+    <button [ngClass]="{ current: currentSlide === 3 }"></button>
   </div>
 </div>
