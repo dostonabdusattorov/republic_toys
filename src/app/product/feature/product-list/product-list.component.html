@@ -3,7 +3,7 @@
     <app-breadcrumb
       [breadcrumbs]="[
         { label: 'Home', url: '' },
-        { label: 'Toys', url: 'products' }
+        { label: 'Toys', url: '' }
       ]"
     ></app-breadcrumb>
   </div>
@@ -67,6 +67,7 @@
     <div class="toys-list">
       <app-toy-box
         *ngFor="let toy of filteredToys"
+        [id]="toy.id"
         [img]="toy.images[0]"
         [articul]="toy.articul"
         [name]="toy.name"

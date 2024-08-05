@@ -13,4 +13,5 @@ export class LinkButtonComponent {
   @Input() icon: string = '';
   @Input() link: string = '';
   @Input() down: boolean = false;
+  @Input() long: boolean = false;
 }

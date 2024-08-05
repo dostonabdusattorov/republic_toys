@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SingleProductComponent } from './single-product.component';
+import { B2bSalesComponent } from './b2b-sales.component';
 
-const routes: Routes = [{ path: '', component: SingleProductComponent }];
+const routes: Routes = [{ path: '', component: B2bSalesComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SingleProductRoutingModule {}
+export class B2bSalesRoutingModule {}

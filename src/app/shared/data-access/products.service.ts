@@ -17,4 +17,8 @@ export class ProductsService {
       data: products.toys.slice((pagination - 1) * count, pagination * count),
     });
   }
+
+  getSingleToy(id: string): Observable<any> {
+    return of(products.toys.find((toy: any) => toy.id === id));
+  }
 }

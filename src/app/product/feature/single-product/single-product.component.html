@@ -1,0 +1,148 @@
+<app-page>
+  <div id="breadcrumb">
+    <app-breadcrumb
+      [breadcrumbs]="[
+        { label: 'Home', url: '' },
+        { label: 'Toys', url: '/products' },
+        { label: 'Single Toy', url: '' }
+      ]"
+    ></app-breadcrumb>
+  </div>
+  <div id="menu">
+    <app-order-link></app-order-link>
+    <app-button arrow="right">ORDER NOW</app-button>
+  </div>
+  <div id="body">
+    <h1 class="heading">{{ toy.name }}</h1>
+    <app-gallery [images]="toy.images"></app-gallery>
+    <section class="toy-presentation">
+      <div class="info">
+        <div class="info-group">
+          <div class="info-group-item short">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>Artucul</span>
+              {{ toy.articul }}
+            </div>
+          </div>
+          <div class="info-group-item long">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>Type of packaging:</span>
+              {{ toy.packageType }}
+            </div>
+          </div>
+        </div>
+        <div class="info-group">
+          <div class="info-group-item short">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>EAN-13:</span>
+              {{ toy.ean13 }}
+            </div>
+          </div>
+          <div class="info-group-item long">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>Multipack type:</span>
+              {{ toy.multipackType }}
+            </div>
+          </div>
+        </div>
+        <div class="info-group">
+          <div class="info-group-item short">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>Assembled toy size:</span>
+              {{ toy.toySize }}
+            </div>
+          </div>
+          <div class="info-group-item long">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>Approximate package size:</span>
+              {{ toy.appPackageSize }}
+            </div>
+          </div>
+        </div>
+        <div class="info-group">
+          <div class="info-group-item short">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>Package size:</span>
+              {{ toy.packageSize }}
+            </div>
+          </div>
+          <div class="info-group-item short">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>Package quantity:</span>
+              {{ toy.quantity }}
+            </div>
+          </div>
+          <div class="info-group-item short">
+            <div class="info-group-item-icon">
+              <img
+                src="../../../../assets/icons/preferences 1.svg"
+                alt="icon"
+              />
+            </div>
+            <div class="info-group-item-desc">
+              <span>Certificate:</span>
+              <a routerLink="/b2b-sales">
+                Download
+                <img
+                  src="../../../../assets/icons/Arrow---Right-grey.svg"
+                  alt="arrow right"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="related">
+      <h2 class="heading-secondary">Related toys</h2>
+    </section>
+  </div>
+</app-page>

@@ -14,11 +14,23 @@ const routes: Routes = [
         (m) => m.ProductShellModule
       ),
   },
-  // { path: '**', redirectTo: '', pathMatch: 'full' },
+  {
+    path: 'b2b-sales',
+    loadChildren: () =>
+      import('./b2b-sales/feature/b2b-sales.module').then(
+        (m) => m.B2bSalesModule
+      ),
+  },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

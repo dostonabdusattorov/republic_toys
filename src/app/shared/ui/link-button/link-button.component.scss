@@ -6,6 +6,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &.long {
+    width: 70rem;
+  }
   .icon {
     width: 5.5rem;
     height: 5.5rem;
@@ -19,11 +22,12 @@
     a {
       height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: left;
       align-items: center;
       gap: 5px;
       color: #10142d;
       font-size: 1.8rem;
+      padding: 0 2rem;
       span {
         border-bottom: 1px solid #10142d;
         display: flex;
