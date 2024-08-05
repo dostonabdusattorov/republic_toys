@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SpecialistCardComponent } from '../specialists-card/specialists-card.component';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-specialists',
@@ -8,6 +15,23 @@ import { SpecialistCardComponent } from '../specialists-card/specialists-card.co
   imports: [CommonModule, SpecialistCardComponent],
   templateUrl: './specialists.component.html',
   styleUrls: ['./specialists.component.scss'],
+  animations: [
+    trigger('expandHideAnimation', [
+      state(
+        'collapsed',
+        style({
+          height: 'calc(29.9rem * 2 + 4rem)',
+        })
+      ),
+      state(
+        'expanded',
+        style({
+          height: '*',
+        })
+      ),
+      transition('collapsed <=> expanded', animate('300ms ease-in-out')),
+    ]),
+  ],
 })
 export class SpecialistsComponent {
   isWorkersExpanded: boolean = false;

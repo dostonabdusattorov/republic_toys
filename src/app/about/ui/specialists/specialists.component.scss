@@ -27,11 +27,7 @@
     justify-content: left;
     gap: 4rem;
     flex-wrap: wrap;
-    height: calc(29.9rem * 2 + 4rem);
     overflow: hidden;
-    &.expanded {
-      height: fit-content;
-    }
   }
   .expand {
     margin-left: 4rem;

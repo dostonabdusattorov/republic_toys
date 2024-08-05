@@ -78,7 +78,7 @@ export class AccordionComponent {
       if (i === index) {
         return { ...item, expanded: !item.expanded };
       } else {
-        return { ...item, expanded: false }; // Optionally, you can collapse other items
+        return { ...item, expanded: false };
       }
     });
   }

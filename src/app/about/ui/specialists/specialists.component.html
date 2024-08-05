@@ -8,7 +8,10 @@
       {{ specialist.title }}
     </div>
   </div>
-  <div class="specialists-workers" [ngClass]="{ expanded: isWorkersExpanded }">
+  <div
+    class="specialists-workers"
+    [@expandHideAnimation]="isWorkersExpanded ? 'expanded' : 'collapsed'"
+  >
     <app-specialist-card
       *ngFor="let worker of activeSpecialistWorkers"
       [src]="worker.src"

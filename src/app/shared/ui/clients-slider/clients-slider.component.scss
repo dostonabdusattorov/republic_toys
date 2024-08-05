@@ -1,16 +1,20 @@
-.client-slider {
-  width: 107rem;
+.wrapper {
   position: relative;
   margin-left: 4rem;
-  &-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
+  width: 107rem;
+  .client-slider {
     width: 100%;
     overflow: hidden;
-    img {
-      height: 10rem;
+    &-list {
+      transition: transform 0.5s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem;
+      width: 100%;
+      &-item img {
+        height: 10rem;
+      }
     }
   }
   .control {

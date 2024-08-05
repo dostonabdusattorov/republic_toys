@@ -1,14 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  animate,
-  group,
-  query,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 
 @Component({
   selector: 'app-clients-slider',
@@ -26,16 +17,22 @@ export class ClientsSliderComponent {
     '../../../../assets/images/Group 127.svg',
     '../../../../assets/images/Group 128.svg',
   ];
-  currentSlide: number = 1;
+  currentSlide: number = 0;
   next() {
-    if (this.currentSlide < this.slides.length - 2) {
+    if (this.currentSlide < this.slides.length - 3) {
       this.currentSlide++;
     }
   }
   prev() {
-    if (this.currentSlide > 1) {
+    if (this.currentSlide > 0) {
       this.currentSlide--;
     }
+  }
+  get transformStyle(): string {
+    const gapAdjustment = (40 / this.slides.length) * this.currentSlide;
+    return `translateX(calc(-${(this.currentSlide * 100) / 3}% - ${
+      2 * gapAdjustment
+    }px))`;
   }
   get activeSlides() {
     return [

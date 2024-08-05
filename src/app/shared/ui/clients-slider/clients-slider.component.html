@@ -1,20 +1,22 @@
-<div class="client-slider">
-  <div class="client-slider-list">
-    <img
-      *ngFor="let slide of activeSlides; let i = index; trackBy: trackById"
-      [src]="slide"
-      alt="client"
-      [ngClass]="{ current: currentSlide === i }"
-    />
+<div class="wrapper">
+  <div class="client-slider">
+    <div class="client-slider-list" [style.transform]="transformStyle">
+      <div
+        *ngFor="let slide of slides; let i = index; trackBy: trackById"
+        class="client-slider-list-item"
+      >
+        <img [src]="slide" alt="client" />
+      </div>
+    </div>
   </div>
   <button
     class="control prev"
-    [ngClass]="{ active: currentSlide > 1 }"
+    [ngClass]="{ active: currentSlide > 0 }"
     (click)="prev()"
   >
     <img
       [src]="
-        currentSlide > 1
+        currentSlide > 0
           ? '../../../../assets/icons/Arrow---Right.svg'
           : '../../../../assets/icons/Arrow---Right-grey.svg'
       "
@@ -23,12 +25,12 @@
   </button>
   <button
     class="control next"
-    [ngClass]="{ active: currentSlide < slides.length - 2 }"
+    [ngClass]="{ active: currentSlide < slides.length - 3 }"
     (click)="next()"
   >
     <img
       [src]="
-        currentSlide < slides.length - 2
+        currentSlide < slides.length - 3
           ? '../../../../assets/icons/Arrow---Right.svg'
           : '../../../../assets/icons/Arrow---Right-grey.svg'
       "
