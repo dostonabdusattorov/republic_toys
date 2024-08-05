@@ -21,6 +21,13 @@ const routes: Routes = [
         (m) => m.B2bSalesModule
       ),
   },
+  {
+    path: 'contacts',
+    loadChildren: () =>
+      import('./contacts/feature/contacts.module').then(
+        (m) => m.ContactsModule
+      ),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

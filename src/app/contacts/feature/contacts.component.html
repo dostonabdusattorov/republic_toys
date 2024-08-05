@@ -1,0 +1,49 @@
+<app-page>
+  <div id="breadcrumb">
+    <app-breadcrumb
+      [breadcrumbs]="[
+        { label: 'Home', url: '/' },
+        { label: 'Contacts', url: '' }
+      ]"
+    ></app-breadcrumb>
+  </div>
+  <div id="menu">
+    <div class="team-message">
+      <div class="icon">
+        <img src="../../../assets/icons/icons8-info-50.png" alt="" />
+      </div>
+      <div class="text">
+        We’re answering calls and emails as quickly as possible. Thanks for
+        waiting.
+      </div>
+    </div>
+  </div>
+  <div id="body">
+    <h1 class="heading">Contacts</h1>
+    <section class="map--info">
+      <div class="map--info-container">
+        <div class="map">
+          <img src="../../../assets/images/Group 61.svg" alt="map" />
+        </div>
+        <div class="info">
+          <div>
+            <app-link-button icon="../../../../assets/icons/mention 1.svg"
+              >info@redesign.expert →</app-link-button
+            >
+          </div>
+          <div>
+            <app-link-button icon="../../../../assets/icons/Profile.svg"
+              >Chat with us</app-link-button
+            >
+          </div>
+          <div>
+            <app-link-button icon="../../../../assets/icons/mention 1.svg"
+              >Chat with us →</app-link-button
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <app-email-form></app-email-form>
+  </div>
+</app-page>
