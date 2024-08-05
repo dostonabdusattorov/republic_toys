@@ -21,4 +21,8 @@ export class ProductsService {
   getSingleToy(id: string): Observable<any> {
     return of(products.toys.find((toy: any) => toy.id === id));
   }
+
+  getCategoryToys(category: string): Observable<any[]> {
+    return of(products.toys.filter((toy: any) => toy.category === category));
+  }
 }

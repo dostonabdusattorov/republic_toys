@@ -33,7 +33,11 @@
     <h1 class="heading">Toys</h1>
     <div class="search-box">
       <div class="search-input">
-        <input type="text" placeholder="Search among 100+ toys" />
+        <input
+          type="text"
+          placeholder="Search among 100+ toys"
+          (input)="setSearchText($event)"
+        />
         <div class="icon">
           <img src="../../../../assets/icons/Search.svg" alt="search icon" />
         </div>
@@ -65,6 +69,7 @@
       </div>
     </div>
     <div class="toys-list">
+      <h1 *ngIf="filteredToys.length === 0" class="heading">No toys found!</h1>
       <app-toy-box
         *ngFor="let toy of filteredToys"
         [id]="toy.id"

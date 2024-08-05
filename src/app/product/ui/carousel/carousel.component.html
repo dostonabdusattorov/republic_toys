@@ -1,1 +1,42 @@
-<p>carousel works!</p>
+<div class="carousel">
+  <div class="carousel-wrapper">
+    <div class="carousel-wrapper-toys" [style.transform]="transformStyle">
+      <div *ngFor="let toy of toys; let i = index">
+        <app-toy-box
+          [id]="toy.id"
+          [img]="toy.images[0]"
+          [articul]="toy.articul"
+          [name]="toy.name"
+        ></app-toy-box>
+      </div>
+    </div>
+  </div>
+  <button
+    class="control prev"
+    [ngClass]="{ active: currentSlide > 0 }"
+    (click)="prev()"
+  >
+    <img
+      [src]="
+        currentSlide > 0
+          ? '../../../../assets/icons/Arrow---Right.svg'
+          : '../../../../assets/icons/Arrow---Right-grey.svg'
+      "
+      alt="prev"
+    />
+  </button>
+  <button
+    class="control next"
+    [ngClass]="{ active: currentSlide < toys.length - 3 }"
+    (click)="next()"
+  >
+    <img
+      [src]="
+        currentSlide < toys.length - 3
+          ? '../../../../assets/icons/Arrow---Right.svg'
+          : '../../../../assets/icons/Arrow---Right-grey.svg'
+      "
+      alt="next"
+    />
+  </button>
+</div>

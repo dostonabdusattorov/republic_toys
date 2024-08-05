@@ -16,6 +16,9 @@ export class ClientsSliderComponent {
     '../../../../assets/images/Group 126.svg',
     '../../../../assets/images/Group 127.svg',
     '../../../../assets/images/Group 128.svg',
+    '../../../../assets/images/Group 126.svg',
+    '../../../../assets/images/Group 127.svg',
+    '../../../../assets/images/Group 128.svg',
   ];
   currentSlide: number = 0;
   next() {
@@ -29,18 +32,9 @@ export class ClientsSliderComponent {
     }
   }
   get transformStyle(): string {
-    const gapAdjustment = (40 / this.slides.length) * this.currentSlide;
-    return `translateX(calc(-${(this.currentSlide * 100) / 3}% - ${
-      2 * gapAdjustment
-    }px))`;
+    return `translateX(calc(37rem * ${-this.currentSlide}))`;
   }
-  get activeSlides() {
-    return [
-      this.slides[this.currentSlide - 1],
-      this.slides[this.currentSlide],
-      this.slides[this.currentSlide + 1],
-    ];
-  }
+
   trackById(index: number, item: any) {
     return item;
   }

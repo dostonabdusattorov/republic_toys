@@ -13,6 +13,7 @@ export class ProductListComponent {
   current: number = 1;
   pagination_count: number = 12;
   total_toys_count!: number;
+  searchText: string = '';
   private categoriesSubscription!: Subscription;
   private toysSubscription!: Subscription;
 
@@ -51,18 +52,26 @@ export class ProductListComponent {
     });
   }
 
+  setSearchText(event: any): void {
+    this.searchText = event.target.value;
+  }
+
   get selectedCategoriesFilter(): any[] {
     return this.categoriesFilter.filter((item) => item.selected);
   }
 
-  get filteredToys(): any {
-    return this.toys.filter((toy) => {
-      if (this.selectedCategoriesFilter.length === 0) return true;
+  get filteredToys(): any[] {
+    return this.toys
+      .filter((toy) => {
+        if (this.selectedCategoriesFilter.length === 0) return true;
 
-      return this.selectedCategoriesFilter.find(
-        (category) => category.id === toy.category
+        return this.selectedCategoriesFilter.find(
+          (category) => category.id === toy.category
+        );
+      })
+      .filter((toy) =>
+        toy.name?.toLowerCase().includes(this.searchText.toLowerCase())
       );
-    });
   }
 
   ngOnDestroy(): void {
