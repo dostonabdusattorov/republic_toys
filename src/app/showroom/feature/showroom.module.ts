@@ -9,7 +9,7 @@ import {
   LinkButtonComponent,
   PageComponent,
 } from '../../shared';
-import { GalleryComponent } from '../ui/gallery.component';
+import { GalleryComponent } from '../../shared';
 
 @NgModule({
   declarations: [ShowroomComponent],

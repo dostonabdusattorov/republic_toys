@@ -35,6 +35,11 @@ const routes: Routes = [
         (m) => m.ShowroomModule
       ),
   },
+  {
+    path: 'about',
+    loadChildren: () =>
+      import('./about/feature/about.module').then((m) => m.AboutModule),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

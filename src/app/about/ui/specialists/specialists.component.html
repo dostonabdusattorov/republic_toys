@@ -1,0 +1,25 @@
+<div class="specialists">
+  <div class="specialists-list">
+    <div
+      *ngFor="let specialist of specialists; trackBy: trackSpecialistsById"
+      [ngClass]="{ active: specialist.active }"
+      (click)="setActiveSpecialist(specialist.id)"
+    >
+      {{ specialist.title }}
+    </div>
+  </div>
+  <div class="specialists-workers" [ngClass]="{ expanded: isWorkersExpanded }">
+    <app-specialist-card
+      *ngFor="let worker of activeSpecialistWorkers"
+      [src]="worker.src"
+      [job]="worker.job"
+      [name]="worker.name"
+    >
+    </app-specialist-card>
+  </div>
+  <div class="expand">
+    <button (click)="toggleIsWorkersExpanded()">
+      {{ !isWorkersExpanded ? "View all gatherers ↻" : "Hide" }}
+    </button>
+  </div>
+</div>

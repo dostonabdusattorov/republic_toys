@@ -12,12 +12,12 @@ import {
   PageComponent,
   EmailFormComponent,
   ClientsSliderComponent,
+  TestimonialListComponent,
 } from '../../shared';
 import {
   AccordionComponent,
   CarouselComponent,
   CategoryBoxComponent,
-  TestimonialListComponent,
 } from '../ui';
 
 @NgModule({

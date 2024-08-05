@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SingleTestimonialComponent } from '../single-testimonial/single-testimonial.component';
+import { SingleTestimonialComponent } from '../../../home/ui/single-testimonial/single-testimonial.component';
 
 @Component({
   selector: 'app-testimonial-list',

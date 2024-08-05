@@ -1,0 +1,153 @@
+<app-page>
+  <div id="breadcrumb">
+    <app-breadcrumb
+      [breadcrumbs]="[
+        { label: 'Home', url: '' },
+        { label: 'Abous Us', url: '' }
+      ]"
+    ></app-breadcrumb>
+  </div>
+  <div id="menu">
+    <app-order-link></app-order-link>
+    <app-button arrow="right">ORDER NOW</app-button>
+  </div>
+  <div id="body">
+    <h1 class="heading">Abous Us - 2 mins video</h1>
+    <section class="hero">
+      <div class="hero-info">
+        <div class="hero-info-video">
+          <img
+            src="../../../assets/images/about-video.png"
+            alt="showroom background"
+            class="background"
+          />
+          <p class="desc">
+            Work experience and conditions <br />
+            that toys are made in
+            <img src="../../../assets/icons/Arrow---Right.svg" alt="right" />
+          </p>
+          <div class="play">
+            <div class="play-btn">
+              <img
+                src="../../../assets/icons/play-right.svg"
+                alt="play-right"
+              />
+            </div>
+            <p>Warch video</p>
+          </div>
+        </div>
+        <div class="hero-info-numbers">
+          <div class="hero-info-numbers-box">
+            <p>The company was founded in</p>
+            <div>2009</div>
+          </div>
+          <div class="hero-info-numbers-box">
+            <p>Number of produced toys</p>
+            <div>1 600 000+</div>
+          </div>
+          <div class="hero-info-numbers-box">
+            <p>Amount of exported packages</p>
+            <div>89 100 <span>/ toys</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-links">
+        <app-link-button
+          icon="assets/icons/Document pdf 1.svg"
+          link="/b2b-sales"
+          >Documents for B2B sales</app-link-button
+        >
+        <app-link-button
+          icon="assets/icons/Phone Call Favorite 1.svg"
+          link="/contacts"
+          >Contacts</app-link-button
+        >
+      </div>
+    </section>
+    <section class="process">
+      <h2 class="heading-secondary">Toys production step by step</h2>
+      <app-phase-tab></app-phase-tab>
+    </section>
+    <section class="values">
+      <h2 class="heading-secondary">The Republic of Toys® Brand Values</h2>
+      <div class="values-list">
+        <app-card
+          [active]="true"
+          icon="assets/icons/Shopping bag 5.svg"
+          title="Imagination"
+          desc="Free play is how children develop their imagination – the foundation for creativity."
+        ></app-card>
+        <app-card
+          icon="assets/icons/User shield 1.svg"
+          title="Fun"
+          desc="Free play is how children develop their imagination – the foundation for creativity."
+        ></app-card>
+        <app-card
+          icon="assets/icons/User shield 1.svg"
+          title="Caring"
+          desc="Free play is how children develop their imagination – the foundation for creativity."
+        ></app-card>
+        <app-card
+          icon="assets/icons/User shield 1.svg"
+          title="Creavity"
+          desc="Free play is how children develop their imagination – the foundation for creativity."
+        ></app-card>
+        <app-card
+          icon="assets/icons/User shield 1.svg"
+          title="Learning"
+          desc="Free play is how children develop their imagination – the foundation for creativity."
+        ></app-card>
+        <app-card
+          icon="assets/icons/User shield 1.svg"
+          title="Quality"
+          desc="Free play is how children develop their imagination – the foundation for creativity."
+        ></app-card>
+      </div>
+    </section>
+    <section class="achivements">
+      <h2 class="heading-secondary">Our achievement in numbers</h2>
+      <div class="achivements-list">
+        <div class="achivements-list-card">
+          <p>Toys manufacturing experience</p>
+          <div>13 years</div>
+        </div>
+        <div class="achivements-list-card">
+          <p>Number of specialists</p>
+          <div>100+</div>
+        </div>
+        <div class="achivements-list-card">
+          <p>Product types</p>
+          <div>350+</div>
+        </div>
+        <div class="achivements-list-card">
+          <p>Countries exported to</p>
+          <div>7+</div>
+        </div>
+        <div class="achivements-list-card">
+          <p>Exported packages per month</p>
+          <div>7 425</div>
+        </div>
+        <div class="achivements-list-card">
+          <p>Produced toys per month</p>
+          <div>10 250</div>
+        </div>
+      </div>
+    </section>
+    <section class="gallery">
+      <h2 class="heading-secondary">Gallery of production process</h2>
+      <app-gallery [images]="images"></app-gallery>
+    </section>
+    <section class="testimonials">
+      <h2 class="heading-secondary">Our clients are satisfied with us</h2>
+      <app-testimonial-list></app-testimonial-list>
+    </section>
+    <section class="specialists">
+      <h2 class="heading-secondary">Our qualified specialists</h2>
+      <app-specialists></app-specialists>
+    </section>
+    <section class="clients">
+      <h2 class="heading-secondary">Clients</h2>
+      <app-clients-slider></app-clients-slider>
+    </section>
+  </div>
+</app-page>

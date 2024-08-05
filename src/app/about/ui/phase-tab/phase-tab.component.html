@@ -1,0 +1,25 @@
+<div class="process-phase">
+  <div class="process-phase-list">
+    <div
+      *ngFor="let phase of phases; trackBy: trackById"
+      [ngClass]="{ active: phase.active }"
+      (click)="setPhase(phase.id)"
+    >
+      {{ phase.title }}
+    </div>
+  </div>
+  <div class="process-phase-steps">
+    <div class="process-phase-steps-img">
+      <img [src]="activePhase.src" alt="step img" />
+    </div>
+    <div class="process-phase-steps-cards">
+      <app-card
+        *ngFor="let step of activePhase.steps"
+        [active]="step.active"
+        [icon]="step.icon"
+        [title]="step.title"
+        [desc]="step.desc"
+      ></app-card>
+    </div>
+  </div>
+</div>

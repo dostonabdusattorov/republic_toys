@@ -1,0 +1,52 @@
+.specialists {
+  width: 107rem;
+  margin-top: 1rem;
+  &-list {
+    width: 100%;
+    margin: 0 0 4rem 4rem;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    justify-content: left;
+    gap: 4rem;
+    div {
+      padding-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #b8b8b8;
+      cursor: pointer;
+      &.active {
+        font-size: 2rem;
+        color: #10142d;
+        border-bottom: 2px solid #db2d37;
+      }
+    }
+  }
+  &-workers {
+    width: 100%;
+    margin: 0 0 4rem 4rem;
+    display: flex;
+    justify-content: left;
+    gap: 4rem;
+    flex-wrap: wrap;
+    height: calc(29.9rem * 2 + 4rem);
+    overflow: hidden;
+    &.expanded {
+      height: fit-content;
+    }
+  }
+  .expand {
+    margin-left: 4rem;
+    display: grid;
+    place-items: center;
+    button {
+      padding: 2rem 4rem;
+      border: none;
+      background-color: #fff;
+      font-size: 1.8rem;
+      color: #10142d;
+      cursor: pointer;
+      &:hover {
+        background-color: #00000005;
+      }
+    }
+  }
+}

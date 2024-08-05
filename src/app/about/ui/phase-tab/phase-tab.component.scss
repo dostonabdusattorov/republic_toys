@@ -1,0 +1,39 @@
+.process-phase {
+  width: 107rem;
+  &-list {
+    width: 100%;
+    margin: 0 0 4rem 4rem;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    justify-content: left;
+    gap: 4rem;
+    div {
+      padding-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #b8b8b8;
+      cursor: pointer;
+      &.active {
+        font-size: 2rem;
+        color: #10142d;
+        border-bottom: 2px solid #db2d37;
+      }
+    }
+  }
+  &-steps {
+    width: 100%;
+    margin-left: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+
+    &-img {
+      width: 70rem;
+      img {
+        width: 100%;
+      }
+    }
+    &-cards {
+      width: 33rem;
+    }
+  }
+}

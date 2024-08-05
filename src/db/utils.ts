@@ -1,4 +1,11 @@
-export const generateId = () => Math.random().toString();
+let id = 0;
+
+export const generateId = () => {
+  id++;
+
+  return id.toString();
+};
+
 export const shuffleArray = (array: any) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

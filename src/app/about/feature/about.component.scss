@@ -1,0 +1,137 @@
+.hero {
+  padding-bottom: 7rem;
+  border-bottom: 1px solid #e1e1e1;
+  &-info {
+    width: 107rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-left: 4rem;
+    &-video {
+      position: relative;
+      width: 70rem;
+      margin: 0 0 2rem;
+      cursor: pointer;
+      .background {
+        height: 39.2rem;
+        width: 100%;
+      }
+      .desc {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        font-size: 1.8rem;
+        font-weight: 590;
+        line-height: 2.16rem;
+        color: #fff;
+        img {
+          transform: rotate(45deg);
+        }
+      }
+      .play {
+        position: absolute;
+        width: 16.5rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        place-items: center;
+        &-btn {
+          width: 6.4rem;
+          height: 6.4rem;
+          border-radius: 50%;
+          background-color: #db2d37;
+          display: grid;
+          place-items: center;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.6rem;
+          color: #fff;
+        }
+      }
+    }
+    &-numbers {
+      &-box {
+        width: 33rem;
+        height: 11rem;
+        border: 1px solid #e1e1e1;
+        border-radius: 4px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        p {
+          font-size: 1.6rem;
+          color: #10142d;
+          margin-bottom: 1.4rem;
+        }
+        div {
+          font-size: 3.4rem;
+          font-weight: 700;
+          color: #10142d;
+          span {
+            font-size: 1.6rem;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  &-links {
+    width: 70rem;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 4rem;
+  }
+}
+
+.process {
+  padding-bottom: 7rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.values,
+.achivements {
+  padding-bottom: 7rem;
+  border-bottom: 1px solid #e1e1e1;
+  &-list {
+    width: 107rem;
+    margin-left: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.achivements-list-card {
+  width: 33rem;
+  height: 11rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  p {
+    font-size: 1.6rem;
+    color: #10142d;
+    margin-bottom: 1.4rem;
+  }
+  div {
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: #000;
+  }
+  &:first-child div {
+    color: #db2d37;
+  }
+}
+
+.gallery {
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.testimonials,
+.clients,
+.specialists {
+  padding-bottom: 7rem;
+  border-bottom: 1px solid #e1e1e1;
+}

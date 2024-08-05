@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Input, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,17 +12,7 @@ export class GalleryComponent {
   isSliderActive: boolean = false;
   sliderActiveImg: number = 0;
 
-  images: any[] = [
-    { src: 'assets/images/showroom-9.png', main: true },
-    { src: 'assets/images/showroom-1.png', main: false },
-    { src: 'assets/images/showroom-2.png', main: false },
-    { src: 'assets/images/showroom-3.png', main: false },
-    { src: 'assets/images/showroom-4.png', main: false },
-    { src: 'assets/images/showroom-5.png', main: false },
-    { src: 'assets/images/showroom-6.png', main: false },
-    { src: 'assets/images/showroom-7.png', main: false },
-    { src: 'assets/images/showroom-8.png', main: false },
-  ];
+  @Input() images!: any[];
 
   constructor(private renderer: Renderer2) {}
 

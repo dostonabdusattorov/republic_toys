@@ -6,3 +6,5 @@ export * from './order-link/order-link.component';
 export * from './page/page.component';
 export * from './email-form/email-form.component';
 export * from './clients-slider/clients-slider.component';
+export * from './gallery/gallery.component';
+export * from './testimonial-list/testimonial-list.component';
