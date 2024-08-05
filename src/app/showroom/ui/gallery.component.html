@@ -1,0 +1,53 @@
+<div class="gallery">
+  <div class="gallery-main">
+    <img [src]="mainImage.src" alt="main" />
+    <button (click)="startSlider()">
+      <img src="../../../assets/icons/Group 36--light.svg" alt="expand" />
+    </button>
+  </div>
+  <div class="gallery-others">
+    <img
+      *ngFor="let img of otherImages; trackBy: trackBySrc"
+      [src]="img.src"
+      alt="other"
+      (click)="setMainImage(img.src)"
+    />
+  </div>
+</div>
+
+<div *ngIf="isSliderActive" class="modal" (click)="finishSlider()"></div>
+<div *ngIf="isSliderActive" class="slider">
+  <img [src]="images[sliderActiveImg].src" alt="" />
+  <button
+    class="control prev"
+    [ngClass]="{ active: sliderActiveImg > 0 }"
+    (click)="sliderPrev()"
+  >
+    <img
+      *ngIf="!(sliderActiveImg > 0)"
+      src="../../../../assets/icons/Arrow---Right-grey.svg"
+      alt="prev"
+    />
+    <img
+      *ngIf="sliderActiveImg > 0"
+      src="../../../../assets/icons/Arrow---Right.svg"
+      alt="prev"
+    />
+  </button>
+  <button
+    class="control next"
+    [ngClass]="{ active: sliderActiveImg < images.length - 1 }"
+    (click)="sliderNext()"
+  >
+    <img
+      *ngIf="sliderActiveImg < images.length - 1"
+      src="../../../../assets/icons/Arrow---Right.svg"
+      alt="next"
+    />
+    <img
+      *ngIf="!(sliderActiveImg < images.length - 1)"
+      src="../../../../assets/icons/Arrow---Right-grey.svg"
+      alt="next"
+    />
+  </button>
+</div>

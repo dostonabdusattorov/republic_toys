@@ -28,6 +28,13 @@ const routes: Routes = [
         (m) => m.ContactsModule
       ),
   },
+  {
+    path: 'showroom',
+    loadChildren: () =>
+      import('./showroom/feature/showroom.module').then(
+        (m) => m.ShowroomModule
+      ),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

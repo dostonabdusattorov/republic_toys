@@ -18,6 +18,7 @@ export class GalleryComponent {
 
   setActiveImage(index: number) {
     this.activeImg = index;
+    this.sliderActiveImg = index;
   }
 
   startSlider(): void {
