@@ -16,13 +16,11 @@ export class CarouselComponent {
   next() {
     if (this.currentSlide < this.toys.length - 3) {
       this.currentSlide++;
-      console.log(this.currentSlide);
     }
   }
   prev() {
     if (this.currentSlide > 0) {
       this.currentSlide--;
-      console.log(this.currentSlide);
     }
   }
 

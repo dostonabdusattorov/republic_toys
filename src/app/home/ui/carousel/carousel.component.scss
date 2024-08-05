@@ -12,6 +12,7 @@
       transition: 1s;
       &-item {
         width: 107rem;
+        position: relative;
         .img-container {
           img {
             height: 60rem;
